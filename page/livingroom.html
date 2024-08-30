@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/livingroom.css">
+    <link rel="stylesheet" href="../style/toggle.css">
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+    <script src="../jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="ar-top-living-cnt">
+
+    </div>
+    <div class="ar-living-r-main">
+        <div class="ar-living-ctn-lst">
+            <div class="ar-control-menu-list" id="control_manue">
+                <div class="ar-ctrl-top-ctn">
+                    <div class="ar-ctrl-top-manue-list">
+                        <div class="slide-bar">
+                            <i class="fa-solid fa-bars set-bar-icon" id="icon_bar" onclick="click_icon_bar()"></i>
+                        </div>
+                        <div class="sht-title">
+                            <h2>Smart Home</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="ar-ctrl-main-ctn">
+                    <div class="ctrl-cnt-1">
+                        <div class="ar-ctrl-wifi">
+                            <div class="ar-set-wifi-icon">
+                                <i class="fa-solid fa-wifi set-wifi-icon"></i>
+                            </div>
+                            <div class="ar-wifi-contrl">
+                                <h3>Wi-Fi</h3>
+                                <p>Status : on</p>
+                            </div>
+                        </div>
+                        <div class="ar-ctrl-naf-left">
+                            <div class="ar-btn-other-control" onclick="btn_switch_layout(1)">
+                                <div class="ar-icon-ctrl">
+                                    <img width="30px" src="../image/house/air.png" alt="">
+                                </div>
+                                <div class="ar-text-ctrl">
+                                    <p class="light-text-set-size">Air conditioner</p>
+                                </div>
+                            </div>
+                            <div class="ar-btn-other-control" onclick="btn_switch_layout(2)">
+                                <div class="ar-icon-ctrl">
+                                    <i class="fa-solid fa-lightbulb set-icon-left"></i>
+                                </div>
+                                <div class="ar-text-ctrl">
+                                    <p class="light-text-set-size">Light</p>
+                                </div>
+                            </div>
+                            <div class="ar-btn-other-control" onclick="btn_switch_layout(3)">
+                                <div class="ar-icon-ctrl">
+                                    <i class="fa-solid fa-fan set-icon-left"></i>
+                                </div>
+                                <div class="ar-text-ctrl" id="map">
+                                    <p class="light-text-set-size">Traffic</p>
+                                </div>
+                            </div>
+                            <div class="ar-btn-other-control" onclick="btn_switch_layout(4)">
+                                <div class="ar-icon-ctrl">
+                                    <i class="fa-solid fa-user-shield set-icon-left"></i>
+                                </div>
+                                <div class="ar-text-ctrl">
+                                    <p class="light-text-set-size">Security</p>
+                                </div>
+                            </div>
+                            <div class="ar-btn-other-control">
+                                <div class="ar-icon-ctrl">
+                                    <i class="fa-solid fa-house set-icon-left"></i>
+                                </div>
+                                <div class="ar-text-ctrl">
+                                    <p class="light-text-set-size"><a href="../index.html"
+                                            style="text-decoration: none; color:black;">Home</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctrl-cnt-2">
+                        <div class="ctrl-control01" id="ctn-1">
+                            <h3>Air controller</h3>
+                            <div class="ar-air-ctrl-img">
+                                <img class="set-air-ctrl-img" id="set_air_con_image" src="../image/house/air_off.png"
+                                    alt="">
+                            </div>
+                            <div class="switch-control">
+                                <div class="ctrl-air-btn-onofflist">
+                                    <div class="switch-ctrl-1">
+                                        <label for="" class="off-txt">Off</label>
+                                    </div>
+                                    <div class="switch-ctrl-2">
+                                        <label class="switch">
+                                            <input type="checkbox" id="check_bx" onclick="check_on_off(1)">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                    <div class="switch-ctrl-3">
+                                        <label for="" class="on-txt">On</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ar-rec-temp-val">
+                                <button class="btn-set-air-contrl" onclick="btn_reduce_temp()">-</button>
+                                <h1 class="btn-set-air-contrl" id="temp_val">0&#186</h1>
+                                <button class="btn-set-air-contrl" onclick="btn_increase_temp()">+</button>
+                            </div>
+                            <div class="ar-air-oth-control-speed" onclick="btn_set_speed_air(25)">
+                                <p>กดเพื่อปรับอุณหภูมิแอร์ที่ 25&#186</p>
+                            </div>
+                            <div class="ar-air-oth-control-speed" onclick="btn_set_speed_air(18)">
+                                <p>กดเพื่อปรับอุณหภูมิแอร์ที่ 18&#186</p>
+                            </div>
+                            <div class="ar-air-oth-control-speed" onclick="btn_set_speed_air(8)">
+                                <p>กดเพื่อปรับอุณหภูมิแอร์ที่ 8&#186</p>
+                            </div>
+                        </div>
+                        <div class="ctrl-control02" id="ctn-2">
+                            <h3>Light controller</h3>
+                            <div class="ar-tbl-light-contrl">
+                                <table class="ar-tbl-contrl">
+                                    <tr>
+                                        <td><img class="light_off" id="light1" onclick="ctrl_light(1)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Bedroom</p>
+                                        </td>
+                                        <td><img class="light_off" id="light2" onclick="ctrl_light(2)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Living room</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="light_off" id="light3" onclick="ctrl_light(3)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Bathroom</p>
+                                        </td>
+                                        <td><img class="light_off" id="light4" onclick="ctrl_light(4)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Kitchen</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><img class="light_off" id="light5" onclick="ctrl_light(5)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Dining room</p>
+                                        </td>
+                                        <td><img class="light_off" id="light6" onclick="ctrl_light(6)"
+                                                src="../image/house/light_off.png" alt="">
+                                            <p>Vegetable plot</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="ctrl-control03" id="ctn-3">
+                            <h3>Traffic</h3>
+                            <div class="traffic-map" id="googleMap"></div>
+                        </div>
+                        <div class="ctrl-control04" id="ctn-4">
+                            <h3>Security</h3>
+                            <br>
+                            <p>IP ที่มีการเข้าถึง</p>
+                            <p class="txt-ip-access" id="host_name">- IP 192.168.253.5 Time: 19:30 From: Thailand</p>
+                            <p class="txt-ip-access" id="cli_ip">- IP 192.168.253.5 Time: 19:30 From: Thailand</p>
+                            <p class="txt-ip-access" id="country">- IP 192.168.253.5 Time: 19:30 From: Thailand</p>
+                            <p class="txt-ip-access" id="date_and_time"></p>
+                        </div>
+                    </div>
+                    <div class="ctrl-cnt-3">
+                        <center>
+                            <h3>Status</h3>
+                        </center>
+                        <div>
+                            <p>Air status</p>
+                            <p class="air-status" id="airStatus"></p>
+                            <p>Light bulb status</p>
+                            <p class="light1-status">- light 1: <span id="light1Status">off</span></p>
+                            <p class="light2-status">- light 2:<span id="light2Status">off</span></p>
+                            <p class="light3-status">- light 3:<span id="light3Status">off</span></p>
+                            <p class="light4-status">- light 4:<span id="light4Status">off</span></p>
+                            <p class="light5-status">- light 5:<span id="light5Status">off</span></p>
+                            <p class="light6-status">- light 6:<span id="light6Status">off</span></p>
+                        </div>
+                        <div>
+                            <button class="btn-start-equipment" onclick="btn_turn_on_airConditioner(6)">Turn on
+                                all</button>
+                            <button class="btn-start-equipment" onclick="btn_turn_on_airConditioner(4)">Turn on 4
+                            </button>
+                            <button class="btn-start-equipment" onclick="btn_turn_on_airConditioner(0)">Turn of
+                                all</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script/living_r.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=myMap"></script>

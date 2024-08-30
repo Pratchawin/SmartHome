@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: rgb(59, 59, 59);
+    background-image: url("../image/house/living01.jpg");
+    font-family: sans-serif;
+}
+.ar-living-r-main{
+    display: grid;
+    justify-content: center;
+}
+.ar-living-ctn-lst{
+    width: 1920px;
+    height: 900px;
+    display: grid;
+    justify-content: center;
+}
+.living-image{
+    width: 100%;
+}
+.ar-top-living-cnt{
+    position: absolute;
+}
+.sht-title{
+    text-align: center;
+    margin-top:20px;
+}
+.ar-control-menu-list{
+    width: 1280px;
+    background-color: rgb(46 53 75);
+    height: 800px;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+.set-bar-icon{
+    cursor: pointer;
+}
+.ar-ctrl-top-manue-list{
+
+}
+.ar-ctrl-main-ctn,.ar-ctrl-top-manue-list,.ar-btn-other-control{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ar-btn-other-control{
+    border: none;
+    cursor: pointer;
+}
+.slide-bar{
+    padding: 30px;
+}
+.sht-title{
+    padding-top: 5px;
+    text-align: center;
+    width: 80%;
+}
+.ctrl-cnt-1,.ctrl-cnt-3{
+    padding: 20px;
+    width: 20%;
+}
+.ctrl-cnt-2{
+    padding: 20px;
+    width: 60%;
+}
+.set-wifi-icon{
+    font-size: 50px;
+}
+.set-bar-icon{
+    font-size: 30px;
+}
+.ar-ctrl-wifi{
+    text-align: center;
+}
+.ar-btn-other-control{
+    background-color: lightgray;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.ar-set-wifi-icon{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.ar-icon-ctrl{
+    color: black;
+}
+.set-icon-left{
+    font-size: 20px;
+}
+.light-text-set-size{
+    color: black;
+    padding-left: 10px;
+}
+.ctrl-control02,.ctrl-control03,.ctrl-control04{
+    display: none;
+}
+.ar-air-ctrl-img{
+    text-align: center;
+}
+.set-air-ctrl-img{
+    width: 300px;
+    margin-top: 20px;
+}
+.switch-control{
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+}
+.ctrl-air-btn-onofflist{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.off-txt,.on-txt{
+    font-size: 30px;
+}
+.on-txt{
+    padding: 20px;
+}
+.switch-ctrl-1{
+    margin-right: 20px;
+}
+.ar-rec-temp-val{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.btn-set-air-contrl{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 60px;
+    cursor: pointer;
+}
+/* Light control */
+.ar-tbl-light-contrl{
+    display: flex;
+    justify-content: center;
+}
+.ar-tbl-contrl{
+    margin-top: 30px;
+}
+.light_off{
+    border-radius: 8px;
+    width: 80px;
+    cursor: pointer;
+}
+td{
+    padding: 30px;
+}
+.ar-air-oth-control-speed{
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid rgb(46 53 75);
+}
+.ar-air-oth-control-speed:hover{
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* status */
+.air-status,.light1-status,.light2-status,.light3-status,.light4-status,.light5-status,.light6-status{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.btn-start-equipment{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+.txt-ip-access{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.traffic-map{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+
+

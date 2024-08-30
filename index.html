@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+    <script src="./jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body id="set_body_bg">
+    <!-- <div class="rain-status">
+        <img src="" alt="">
+    </div> -->
+    <div class="top-content">
+        <div class="ar-show-cloud-and-day">
+            <div class="ar-show-sun-and-weater" id="show-temp-intoday">
+                <div class="set-img-and-text">
+                    <img id="set-sun-and-moon" class="image-cloud" src="./image/cloud/sun.png" alt="">
+                    <!-- <img class="image-cloud" src="./image/cloud/moon.png" alt=""> -->
+                    <p id="set-font-color"><span class="show-temp" id="show_temp">30&#186;</span><b></b><br><span
+                            class="time-now" id="show_time">11:17</span><br><span id="canton" class="ind-canton"></span>
+                    </p>
+                    <div class="hm-set-top" id="set-for-dark-mode1">
+                        <div>
+                            <i id="" class="fa-solid fa-temperature-quarter set-top-icon-size"></i>
+                        </div>
+                        <div class="ind-top-hu">
+                            <p><b>ความชื้น</b></p>
+                            <div>
+                                <p id="show_humidity">Rang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-set-top" id="set-for-dark-mode2">
+                        <div>
+                            <i id="sea_val-icon" class="fa-solid fa-water set-top-icon-size"></i>
+                            <!-- <i id="" class="fa-sharp fa-solid fa-bed set-top-icon-size"></i> -->
+                        </div>
+                        <div class="ind-top-hu">
+                            <p><b>ระดับน้ำทะเล</b></p>
+                            <div>
+                                <p id="sea_val">Rang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-set-top" id="set-for-dark-mode3">
+                        <div>
+                            <i id="wind-speed-icon" class="fa-solid fa-wind set-top-icon-size" ></i>
+                        </div>
+                        <div class="ind-top-hu">
+                            <p><b>ความเร็วลม</b></p>
+                            <div>
+                                <p id="wind_speed">Rang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hm-set-top" id="set-for-dark-mode4">
+                        <div>
+                            <i id="plessure-icon" class="fa-solid fa-feather-pointed set-top-icon-size"></i>
+                        </div>
+                        <div class="ind-top-hu">
+                            <p><b>ความดันอากาศ</b></p>
+                            <div>
+                                <p id="plessure_val">Rang</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ar-set-txt-weather-status">
+                    <p class="clear-day-txt" id="weather_today">Clear day</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ar-ind-smart-home">
+        <div class="show-manue-left">
+            <div class="ar-pdd-left-top">
+                <div class="scl-menue-left-list" id="manue_left_slide_1">
+                    <i id="bedroom_color" class="fa-sharp fa-solid fa-bed seticonsize"></i>
+                    <a href="./page/bedroom.html" id="link_color" class="set-link-font-size">Bedroom</a>
+                    <div class="line-slide-left">
+                        <img id="test_img" src="./image/line/line03.png" alt="">
+                    </div>
+                </div>
+                <div class="scl-menue-left-list" id="manue_left_slide_2">
+                    <i class="fa-sharp fa-solid fa-couch seticonsize sofar-color"></i>
+                    <a href="./page/livingroom.html" id="link_color1" class="set-link-font-size">Living room</a>
+                    <div class="line-slide-left2">
+                        <img id="test_img1" src="./image/line/line02.png" alt="">
+                    </div>
+                </div>
+                <div class="scl-menue-left-list" id="manue_left_slide_3">
+                    <i class="fa-sharp fa-solid fa-shower seticonsize showe-icon"></i>
+                    <a href="./page/bathroom.html" id="link_color2" class="set-link-font-size">Water pipe</a>
+                    <div class="line-slide-left3">
+                        <img id="test_img2" src="./image/line/line03.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ar-main-content">
+            <div class="ar-house-image">
+                <img id="set_image_house" class="house-image" src="./image/house/house.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="show-manue-right">
+            <div class="scl-menue-right-list" id="manue_right_slide1">
+                <i class="fa-sharp fa-solid fa-fire-burner seticonsize kitchen"></i>
+                <a href="./page/kitchenroom.html" id="link_color3" class="set-link-font-size">Kitchen</a>
+                <div class="line-slide-right">
+                    <img id="img_right1" src="./image/line/line01.png" alt="">
+                </div>
+            </div>
+            <div class="scl-menue-right-list" id="manue_right_slide2">
+                <!-- <i class="fa-sharp fa-solid fa-bowl-food seticonsize food-icon"></i> -->
+                <i class="fa-regular fa-eye seticonsize food-icon"></i>
+                <a href="./page/cctv.html" id="link_color4" class="set-link-font-size">CCTV Cameras</a>
+                <div class="line-slide-right1">
+                    <img id="img_right2" src="./image/line/line01.png" alt="">
+                </div>
+            </div>
+            <div class="scl-menue-right-list" id="manue_right_slide3">
+                <i class="fa-sharp fa-solid fa-seedling seticonsize plant-color"></i>
+                <a href="./page/vegetable.html" id="link_color5" class="set-link-font-size">Vegetable plot</a>
+                <div class="line-slide-right2">
+                    <img id="img_right3" src="./image/line/line02.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ar-bottom-content">
+
+    </div>
+</body>
+</html>
+<script src="./script/index.js"></script>

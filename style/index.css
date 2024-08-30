@@ -1,0 +1,169 @@
+body{
+    background-image: linear-gradient(#00BFFF, #ffffff);
+    /* background-image: linear-gradient(#000000,#ffffff); */
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    height: 1200px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ar-ind-smart-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ar-main-content{
+    width: 1280px;
+    height: 800px;
+}
+.house-image{
+    margin-top: 288px;
+    width: 70%;
+    display: none;
+}
+.ar-house-image{
+    text-align: center;
+    padding:50px;
+}
+.show-manue-left{
+
+}
+.show-manue-right{
+    margin-top: 80px;
+}
+.ar-show-sun-and-weater{
+    display: none;
+}
+.clear-day-txt{
+    padding-left: 38px;
+    font-size: 20px;
+    width: 200px;
+}
+.ar-set-txt-weather-status{
+    width: 400px;
+}
+.ind-canton{
+    font-size: 30px;
+}
+.ar-pdd-left-top{
+    margin-top: 200px;
+}
+.scl-menue-left-list{
+    border: 5px solid rgb(0, 50, 107);
+    padding: 50px;
+    border-radius: 12px;
+    margin-top: 120px;
+    margin-left: 50px;
+}
+.scl-menue-right-list{
+    border: 5px solid rgb(0, 50, 107);
+    padding: 50px;
+    border-radius: 12px;
+    margin-top: 120px;
+    margin-right: 50px;
+}
+.line-slide-left{
+    position: absolute;
+    top: 278px;
+    left: 335px;
+}
+.line-slide-left1,.line-slide-left2,.line-slide-left3{
+    position: absolute;
+    left: 335px;
+}
+.line-slide-left3{
+    top: 730px;
+    right: 350px;
+    transform: scaleX(-1);
+    transform: scaleY(-1);
+}
+.line-slide-left2{
+    top: 537px;
+}
+.line-slide-right{
+    position: absolute;
+    top: 278px;
+    right: 350px;
+}
+.line-slide-right1,.line-slide-right2{
+    position: absolute;
+    top: 730px;
+    right: 350px;
+    transform: scaleX(-1);
+    transform: scaleY(-1);
+}
+.line-slide-right2{
+    top: 537px;
+}
+.iconleft{
+
+}
+.seticonsize{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.set-link-font-size{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+/* cloud */
+.ar-show-cloud-and-day{
+    position: absolute;
+    top: 50px;
+    left: 500px;
+}
+.show-temp{
+    font-size: 80px;
+}
+.image-cloud{
+    width: 240px;
+}
+.set-img-and-text{
+    display: flex;
+}
+.time-now{
+    font-size: 33px;
+}
+.plant-color{
+    color: green;
+}
+.kitchen{
+    color: white;
+}
+.sofar-color{
+    color: purple;
+}
+.showe-icon{
+    color: rgb(28, 0, 153);
+}
+.food-icon{
+    color: rgb(201, 97, 0);
+}
+.hm-set-top{
+    margin-top: 33px;
+    margin-left: 80px;
+    text-align: center;
+    display: flex;
+}
+.ind-top-hu{
+    margin-left: 10px;
+}
+.set-top-icon-size{
+    font-size: 33px;
+}
+.rain-status{
+    width: 100%;
+    height: 100%;
+    background-color: #00BFFF;
+    position: absolute;
+}
+.btn-turnon-dor{
+    padding: 3px;
+    border-radius: 3px;
+    border: none;
+}

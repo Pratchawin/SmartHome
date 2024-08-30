@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/livingroom.css">
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+    <script src="./jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../style/cctv.css">
+</head>
+<body>
+    <div class="ar-living-r-main">
+        <div class="ar-living-ctn-lst">
+            <div class="ar-control-menu-list">
+                <div class="ar-ctrl-top-ctn">
+                    <div class="cctv-top-content">
+                        <div class="cctv-title">
+                            <h2>CCTV </h2>
+                        </div>
+                        <div class="ar-link-to-home-page">
+                            <a href="../index.html" class="link-to-home-page">Home</a>
+                            <button onclick="turn_off_fan()" class="link-to-home-page">Turn on door</button>
+                            <button onclick="turn_on_fan()" class="link-to-home-page">Turn off door</button>
+                        </div>
+                        <div class="ar-cctv-content">
+                            <div class="cctv-video-out">
+                                <video id="vid"></video>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../script/cctv.js"></script>

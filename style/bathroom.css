@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(39 65 123);
+}
+.ar-bathroom-ctrl{
+  display: flex;
+  justify-content: center;
+}
+.ar-bth-image{
+  margin-top: 137px;
+  height: 700px;
+}
+.bth-left-control,.bth-right-control{
+  margin-top: 100px;
+}
+.check-box{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.btn-change-structure{
+  background-color: orangered;
+  color: white;
+  padding: 12px 20px 12px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.link-to-home{
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+}
+.ar-water-pipe-bx{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 8px;
+  top: 200px;
+  right: 620px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+}
+.ar-water-pipe-bx1{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 8px;
+  top: 620px;
+  right: 300px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+}
+.ar-water-pipe-bx2{
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 8px;
+  top: 650px;
+  left: 300px;
+  text-align: center;
+  background-color: white;
+  display: flex;
+}
+.check-icon{
+  padding-top: 20px;
+  padding-left: 11px;
+  padding-right: 4px;
+  color: green;
+}
+.water-status{
+  color: white;
+}
+#pipe_status_txt1,#pipe_status_txt2,#pipe_status_txt3{
+  padding-right: 10px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/kitchenroom.css">
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+    <script src="./jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="ar-top-living-cnt">
+        
+    </div>
+    <div class="ar-living-r-main">
+        <div class="ar-living-ctn-lst">
+            <div class="ar-kitchen-all-control-ctn">
+                <div class="ar-kitchen-l-ctn">
+                    <div class="ar-back-space">
+                        <div>
+                            <a class="ar-btn-back-to-home-page" href="../index.html">Home</a>
+                        </div>
+                    </div>
+                    <div class="ar-back-space-2">
+                        <div class="opn-fide" onclick="opn_fride_md_bx()">
+                            <p>Fridge</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ar-kitchen-r-ctn">
+                    <div class="ar-show-fride-items" id="fride_modal_bx">
+                        <div class="ar-fride-bg-ctn" id="show_items_in_fride">
+                            <div class="ar-fride-img">
+                                <img src="../image/kitchen/fride3.png" alt="">
+                            </div>
+                            <div class="ar-fride-ctrl">
+                                <div class="top-title-manue">
+                                    <p onclick="hide_fride_model_bx()" class="close-modal-bx">x</p>
+                                </div>
+                                <div class="ar-freeze-obj">
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/ckk.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/pk.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/egg.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ar-freeze-obj">
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/kad.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A1%E0%B8%A7%E0%B8%B1%E0%B8%8A%E0%B8%A3%E0%B8%B0-%E0%B8%9C%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%94-%E0%B8%96-%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%A3-delivery/3-C2JHAXNFGA3ZCX?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/tm.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/nut.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ar-freeze-obj">
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/app.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/milk.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                    <div class="ar-ind-img-txt">
+                                        <div class="ind-img">
+                                            <img src="../image/meet/water.png" alt="" class="indt-img">
+                                        </div>
+                                        <div class="ind-txt">
+                                            <a class="link-to-grab" href="https://food.grab.com/th/th/restaurant/%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%AA%E0%B8%94-%E0%B8%9C%E0%B8%A5%E0%B9%84%E0%B8%A1%E0%B9%89%E0%B8%9B%E0%B8%AD%E0%B8%81-%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87-delivery/3-C3DXGCJ2KBWATA?">สั่งซื้อ</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../script/kitchen.js"></script>

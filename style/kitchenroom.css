@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-color: rgb(59, 59, 59);
+    background-image: url("../image/house/kitchen01.jpg");
+    font-family: sans-serif;
+}
+.ar-living-r-main{
+    display: grid;
+    justify-content: center;
+}
+.ar-living-ctn-lst{
+    display: grid;
+    justify-content: center;
+}
+.ar-kitchen-l-ctn{
+    width: 30%;
+}
+.ar-kitchen-all-control-ctn{
+    width: 1280px;
+    display: flex;
+}
+.ar-kitchen-r-ctn{
+    width: 70%;
+}
+.ar-back-space{
+    height: 300px;
+}
+.ar-back-space-2{
+    height: 350px;
+}
+.opn-fide{
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+    margin-right: 47px;
+    width: 200px;
+    height: 300px;
+    float: right;
+    background-color: rgba(255, 255, 255, 0);
+}
+.opn-fide:hover{
+    cursor: pointer;
+    border: 2px solid red;
+    border-radius: 12px;
+}
+.ar-show-fride-items{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    display: none;
+    justify-content: center;
+}
+.ar-fride-bg-ctn{
+    width: 1280px;
+    display: flex;
+    padding: 20px;
+}
+.ar-fride-img{
+    margin-top: 180px;
+    width: 30%;
+}
+.ar-fride-ctrl{
+    border-radius: 12px;
+    margin-top: 80px;
+    width: 70%;
+    background-color: rgb(128, 128, 128);
+}
+.top-title-manue{
+    margin-top: 5px;
+    margin-right: 20px;
+    text-align: right;
+}
+.ar-fride-order-gradient{
+    padding: 10px;
+}
+.close-modal-bx{
+    cursor: pointer;
+}
+.close-modal-bx:hover{
+    color: red;
+}
+.ar-btn-back-to-home-page{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.ar-freeze-obj{
+    padding: 20px;
+}
+.ar-ind-img-txt{
+    width: 235px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 14px;
+    margin-left: 25px;
+}
+.ar-freeze-obj{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.indt-img{
+
+}
+.ind-img{
+    text-align: center;
+}
+.ind-txt{
+    text-align: center;
+    background-color: rgb(0, 182, 0);
+    padding: 4px;
+}
+.link-to-grab{
+    text-decoration: none;
+    color: white;
+}

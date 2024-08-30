@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vegetable</title>
+    <link rel="stylesheet" href="../style/vegetable.css">
+    <script src="../jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="ar-vegetable-farm-ctrl">
+        <div class="ar-vegetable-ctrl-manue">
+            <div class="ar-vegetable-image">
+                <div class="ar-vegt-shw-items" id="click_to_hide">
+                    <div>
+                        <a class="vgt-link-to-home" href="../index.html">Home</a>
+                    </div>
+                    <div class="ar-show-plant-pot-list">
+                        <div class="ar-pot-list" id="item_ot_01" onclick="show_modal_bx(0)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/pludang.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_02" onclick="show_modal_bx(1)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/green_plant.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_03" onclick="show_modal_bx(2)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/bamboo.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_04" onclick="show_modal_bx(3)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/klassula.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="ar-show-plant-pot-list">
+                        <div class="ar-pot-list" id="item_ot_05" onclick="show_modal_bx(4)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/money_tree.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_06" onclick="show_modal_bx(5)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/rubber_plant.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_07" onclick="show_modal_bx(6)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/jade_plant.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+                        <div class="ar-pot-list" id="item_ot_08" onclick="show_modal_bx(7)">
+                            <div class="pot-image">
+                                <img class="image-width" src="../image/plant/kumquat_tree.png" alt="">
+                            </div>
+                            <div class="pot-details">
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ar-md-vege-detail" id="md_obj">
+                    <div class="md-vege-dt-l-r-ctrl">
+                        <div class="ar-vege-dt-left-ctrl" id="vege_dt_left_ctrl">
+                            <div class="ar-top-ctrl-shw-temp-and-tm">
+
+                            </div>
+                            <div class="ar-vege-table-data" id="set_get_slide">
+                                <div>
+                                    <p><b>ข้อมูลจากอุปกรณ์ IoT</b></p>
+                                </div>
+                                <div class="data-from-iot">
+                                    <div class="inf-from-iot-del">
+                                        <div class="inf-icon">
+                                            <i class="fa-solid fa-droplet set-icon-size"></i>
+                                        </div>
+                                        <div class="inf-data">
+                                            <p>ความชื้น <span id="humidity_id">64</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="inf-from-iot-del">
+                                        <div class="inf-icon">
+                                            <i class="fa-solid fa-eye-dropper set-icon-size"></i>
+                                        </div>
+                                        <div class="inf-data">
+                                            <p>ค่า PH ในดิน <span id="ph_id">3.3</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="inf-from-iot-del">
+                                        <div class="inf-icon">
+                                            <i class="fa-solid fa-temperature-three-quarters set-icon-size"></i>
+                                        </div>
+                                        <div class="inf-data">
+                                            <p>อุณหภูมิ <span id="temp_id">28</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="set-vgt-slide" id="txt_slide">
+                                    <div class="ar-vege-title">
+                                        <h3 id="show_plant_name">Bamboo Palm</h3>
+                                    </div>
+                                    <div class="ar-vege-detail">
+                                        <p class="vege-dt-txt" id="ornamental_plant_dt"></p>
+                                    </div>
+                                    <div class="ar-vege-detail">
+                                        <div class="ar-vege-title">
+                                            <h3>Control</h3>
+
+                                        </div>
+                                        <div class="ar-vege-control">
+                                            <div class="btn-ctrl-plant-feture">
+                                                <img class="wt-icon" src="../image/plant/water_can.png" alt=""
+                                                    onclick="turnOnWater()">
+                                            </div>
+                                            <div class="btn-ctrl-plant-feture">
+                                                <img class="wt-icon" src="../image/plant/fertilizer.png" alt=""
+                                                    onclick="turnOnFertilizer()">
+                                            </div>
+                                            <div class="btn-ctrl-plant-feture">
+                                                <img class="wt-icon" src="../image/plant/fan.png" alt=""
+                                                    onclick="turnOnFan()">
+                                            </div>
+                                        </div>
+                                        <div class="oth-control">
+                                            <p><b>ตั้งเวลาเปิด-ปิด</b></p>
+                                            <div class="ar-set-time-val">
+                                                <div class="ar-set-auto-time">
+                                                    เวลาเปิด <input class="inp-time" type="time">  เวลาปิด <input class="inp-time" type="time">
+                                                </div>
+                                                <div class="ar-btn-set-time">
+                                                    <button class="btn-set-time">Set time</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ar-vege-dt-right-image" id="dt_right_image">
+                            <div class="ar-vege-dt-right-title-close-btn">
+                                <p class="btn-close-pot-md" id="btn_close_md">x</p>
+                            </div>
+                            <div class="plant-name">
+                                <h1 id="h1_plant_name">Plant name</h1>
+                            </div>
+                            <div class="ar-vege-dt-pot-right-img">
+                                <div class="ar-vege-control-status" id="ar-wt-status">
+                                    <img src="../image/plant/water_down.png" alt="" class="water-status" id="water_down">
+                                </div>
+                                <img src="" class="md-image-width-2" alt="" id="change_tree_img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ar-vegetable-farm-ft">
+
+    </div>
+</body>
+
+</html>
+<script src="../script/vegetable.js"></script>

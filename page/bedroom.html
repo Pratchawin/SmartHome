@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/bedroom.css">
+    <script src="../jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="ar-bed-time-alert" id="arClock">
+        <div class="bed-room-content-left" id="areaLeftContent" onclick="changeBackHome()">
+            <div class="music-title">
+                <div class="ar-music-top-manue">
+                    <div class="ar-mu-title-txt">
+                        <p class="mu-sic-title">Music</p>
+                    </div>
+                    <div class="ar-mu-title-icon">
+                        <a class="link-house-icon" href="../index.html"><i id="hideHouseIcon" class="fa-solid fa-house"></i></a>
+                        <i onclick="extractScreen()" class="fa-solid fa-expand set-margin"></i>
+                    </div>
+                </div>
+                <input type="text" name="" id="searchInp" placeholder="Search video" class="form-search-video">
+                <button class="btn-find-vedio">ค้นหา</button>
+                <hr>
+            </div>
+            <div class="ar-show-music-list" id="videoID">
+                <!-- <div class="ar-music-bx">
+                    <iframe class="set-ifram-tage" src="https://www.youtube.com/embed/d58dAfkkP3s?autoplay=1&mute=1">
+                    </iframe>
+                </div> -->
+            </div>
+        </div>
+        <div class="ar-show-time-now" id="clockArea">
+            <div>
+                <div class="ar-clock">
+                    <h1 style="color: white; font-size:60px;">DIGITAL CLOCK</h1>
+                </div>
+                <div>
+                    <p class="time-txt"><span class="time-txt-color" id="timeHour">00</span><span
+                            class="time-colon">:</span><span class="time-txt-color" id="timeMinute">00</span><span
+                            class="time-colon">:</span><span class="time-txt-color" id="timeSecond">00</span></p>
+                </div>
+                <div class="set-time">
+                    <button class="setTimeBtn" onclick="showSetTimeBox()">ตั้งปลุก</button>
+                    <div class="alertSetTimeBox" id="alertBox">
+                        <input class="inpTimeBx" type="time" name="" id="inpTimeVal">
+                        <input class="btnSaveTime" onclick="saveTime()" type="button" value="save">
+                        <div class="show-time-set">
+                            <p id="timeAlert" class="time-txt-alert">21</p>
+                            <button class="btnCancleTime" id="btnCancleTime" onclick="btnCancle()">x</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ar-show-date">
+                    <p class="showDate"><span id="sayStatus"></span><span id="showDate"></span> <span
+                            id="showMonth"></span> <span id="showYear"></span></p>
+                </div>
+                <div class="ar-switch-on-off-light">
+                    <button class="opn-light" onclick="bedroom_right()">
+                        <i class="fa-solid fa-power-off power-on-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script/bedroom.js"></script>

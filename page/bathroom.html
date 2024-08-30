@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/bathroom.css">
+    <script src="https://kit.fontawesome.com/9d0fdde958.js" crossorigin="anonymous"></script>
+    <script src="../jquery/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="ar-bathroom-ctrl">
+        <div class="bth-left-control">
+            <div>
+                <a href="../index.html" class="link-to-home">Home</a>
+            </div>
+        </div>
+        <div class="ar-bth-image">
+            <div>
+                <div class="ar-water-pipe-bx" id="point_1">
+                    <div class="check-icon">
+                        <i class="fa-solid fa-check" id="pipe_status1"></i>
+                    </div>
+                    <div>
+                        <p id="pipe_status_txt1">จุดที่ 1 ปกติ</p>
+                    </div>
+                </div>
+                <div class="ar-water-pipe-bx1" id="point_2">
+                    <div class="check-icon">
+                        <i class="fa-solid fa-check" id="pipe_status2"></i>
+                    </div>
+                    <div>
+                        <p id="pipe_status_txt2">จุดที่ 2 ปกติ</p>
+                    </div>
+                </div>
+                <div class="ar-water-pipe-bx2" id="point_3">
+                    <div class="check-icon">
+                        <i class="fa-solid fa-check" id="pipe_status3"></i>
+                    </div>
+                    <div>
+                        <p id="pipe_status_txt3">จุดที่ 3 ปกติ</p>
+                    </div>
+                </div>
+                <img src="../image/bathroom/water_bluprint.png" id="water_structure" alt="">
+            </div>
+            <div class="check-box">
+                <button onclick="change_struc()" id="btn_change_structure" class="btn-change-structure">สับเปลี่ยนโครงสร้าง</button>
+            </div>
+        </div>
+        <div class="bth-right-control">
+            <p class="water-status">สถานะการทำงาน</p>
+            <p class="water-status">จุดที่ 1 ปกติ</p>
+            <p class="water-status">จุดที่ 2 ปกติ</p>
+            <p class="water-status">จุดที่ 3 ปกติ</p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../script/bathroom.js"></script>
